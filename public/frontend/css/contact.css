@@ -1,0 +1,22 @@
+
+.agent {
+  text-align: center;
+}
+.agent {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5em;
+  word-wrap: break-word;
+}
+
+.red{
+  color:red;
+  }
+.form-area
+{
+  background-color: #FAFAFA;
+padding: 10px 40px 60px;
+margin: 10px 0px 60px;
+border: 1px solid GREY;
+}
