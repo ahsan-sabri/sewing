@@ -6,6 +6,6 @@ Route::group(['middleware' => [], 'prefix' => '', 'as' => ''], function () {
     // product page
     Route::get('products', 'FrontEnd\ProductPageController@index')->name('productpage');
     // pricing page
-    Route::get('pricing', 'FrontEnd\PricingPageController@index')->name('pricingpage');
+    Route::get('details', 'FrontEnd\ProductPageController@show')->name('details');
 
 });

@@ -12,4 +12,10 @@ class ProductPageController extends Controller
         //
         return view('frontend.products');
     }
+
+    public function show()
+    {
+        //
+        return view('frontend.singleproduct');
+    }
 }

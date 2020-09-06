@@ -1,90 +1,123 @@
-<!--banner start here-->
-<div class="banner" id="home">
-    <div class="header">
-        <div class="header-main nav navbar-fixed-top" id="navbar">
-            <div class="container">
-                <nav class="navbar navbar-default">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<!--header-->
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
+                <h1><a href="index.html">Youth <span>Fashion</span></a></h1>
+            </div>
+            <div class="col-sm-4 world animated wow fadeInRight" data-wow-delay=".5s">
+                <div class="cart box_1">
+                    <a href="checkout.html">
+                        <h3>
+                            <div class="total">
+                                <span class="simpleCart_total"></span></div>
+                            <img src="{{ asset('frontend/images/cart.png') }}" alt="" />
+                        </h3>
+                    </a>
+                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
+                </div>
+            </div>
+            <div class="col-sm-2 number animated wow fadeInRight" data-wow-delay=".5s">
+                <span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
+                <p>Call me</p>
+            </div>
+            <div class="col-sm-2 search animated wow fadeInRight" data-wow-delay=".5s">
+                <a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i
+                        class="glyphicon glyphicon-search"> </i> </a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="head-top">
+            <div class="n-avigation">
+
+                <nav class="navbar nav_bottom" role="navigation">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header nav_2">
+                        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+                            data-target="#bs-megadropdown-tabs">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <h1><a  href="index.html">Sewing<span>Great look in Outfit</span></a></h1>
+                        <a class="navbar-brand" href="#"></a>
                     </div>
-                    <!-- navbar-header -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="scroll hvr-outline-in"><a href="#home">Home</a></li>
-                            <li><a class="scroll hvr-outline-in" href="#about">About</a></li>
-                            <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link hvr-outline-in"  data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#works" class="scroll">Latest works</a></li>
-                                    <li><a href="#services" class="scroll">Services</a></li>
-                                    {{-- <li><a href="#experts" class="scroll">Experts</a></li> --}}
-                                </ul>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav nav_1">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown mega-dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span
+                                        class="caret"></span></a>
+                                <div class="dropdown-menu mega-dropdown-menu">
+                                    <div class="container-fluid">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="men">
+                                                <ul class="nav-list list-inline">
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t7.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t8.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t9.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t11.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t1.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="women.html"><img src="{{ asset('frontend/images/t12.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Nav tabs -->
+
+                                </div>
                             </li>
-                            <li><a class="scroll hvr-outline-in" href="#gallery">Gallery</a></li>
-                            <li><a class="scroll hvr-outline-in" href="#contact">Contact</a></li>
+                            <li class="dropdown mega-dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span
+                                        class="caret"></span></a>
+                                <div class="dropdown-menu mega-dropdown-menu">
+                                    <div class="container-fluid">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="men">
+                                                <ul class="nav-list list-inline">
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t10.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t2.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t3.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t4.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t5.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                    <li><a href="men.html"><img src="{{ asset('frontend/images/t6.jpg') }}"
+                                                                class="img-responsive" alt="" /></a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Nav tabs -->
+
+                                </div>
+                            </li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="account.html">Sign In</a></li>
+                            <li class="last"><a href="contact.html">Contact</a></li>
                         </ul>
-                    </div>
-                    <div class="clearfix"> </div>
+                    </div><!-- /.navbar-collapse -->
+                    
                 </nav>
-                <div class="clearfix"> </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="banner-text">
-                <section class="cd-intro">
-                    <h2 class="cd-headline letters scale">
-                        <span>clothes that need to be</span>
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">Sewing</b>
-                            <b>mending</b>
-                            <b>applique</b>
-                            <b>alteration</b>
-                        </span>
-                    </h2>
-                </section>
-                <div class="botton-agileits">
-                    <a href="#" class="hvr-rectangle-in" data-toggle="modal" data-target="#myModal1" >know more</a>
-                </div>
-                <div class="agileits_w3layouts_call_mail">
-                    <ul>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>(+000) 123 456 78</li>
-                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:maria@example.com">info@example.com</a></li>
-                    </ul>
-                </div>
-                <div class="banner-icons-agileinfo">
-                    <ul class="agileits_social_list">
-                        <li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="w3_agile_facebook"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+            <div class="clearfix"> </div>
         </div>
     </div>
 </div>
-<!--banner end here-->
-
-<!-- Modal1 -->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4>Sewing</h4>
-                <img src="images/a1.jpg" alt=" " class="img-responsive">
-                <h3 class="subheading-w3l">Welcome to <span>Sewing</span> Designs</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //Modal1 -->
-
-<!-- banner-bottom -->

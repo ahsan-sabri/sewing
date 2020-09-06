@@ -10,65 +10,77 @@
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Products</li>
+				<li class="active">Single</li>
 			</ol>
 		</div>
 	</div>
-    <!--content-->
-    <div class="products">
+    <div class="single">
+
         <div class="container">
-            <h2>Products</h2>
             <div class="col-md-9">
-                <div class="content-top1">
-                    <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Trouser</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>	
-                <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi2.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Trouser</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                            
-                        </div>
-                    </div>	
-                <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi4.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Pant</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                            
-                        </div>
-                    </div>	
-                
-                <div class="clearfix"> </div>
+                <div class="col-md-5 grid">		
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li data-thumb="{{ asset('frontend/images/si.jpg') }}">
+                                <div class="thumb-image"> <img src="{{ asset('frontend/images/si.jpg') }}" data-imagezoom="true" class="img-responsive"> </div>
+                            </li>
+                            <li data-thumb="{{ asset('frontend/images/si1.jpg') }}">
+                                <div class="thumb-image"> <img src="{{ asset('frontend/images/si1.jpg') }}" data-imagezoom="true" class="img-responsive"> </div>
+                            </li>
+                            <li data-thumb="{{ asset('frontend/images/si2.jpg') }}">
+                            <div class="thumb-image"> <img src="{{ asset('frontend/images/si2.jpg') }}" data-imagezoom="true" class="img-responsive"> </div>
+                            </li> 
+                        </ul>
+                    </div>
                 </div>	
-                <div class="content-top1">
+                <div class="col-md-7 single-top-in">
+                    <div class="single-para simpleCart_shelfItem">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        <div class="star-on">
+                            <ul>
+                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
+                            </ul>
+                            <div class="review">
+                                <a href="#"> 3 reviews </a>/
+                                <a href="#">  Write a review</a>
+                            </div>
+                        <div class="clearfix"> </div>
+                        </div>
+                        
+                            <label  class="add-to item_price">$70.5</label>
+                        
+                        <div class="available">
+                            <h6>Available Options :</h6>
+                            <ul>
+                                
+                            <li>Size:<select>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>small</option>
+                                <option>Large</option>
+                                <option>small</option>
+                            </select></li>
+                            <li>Cost:
+                                    <select>
+                                    <option>U.S.Dollar</option>
+                                    <option>Euro</option>
+                                </select></li>
+                        </ul>
+                    </div>
+                            <a href="#" class="cart item_add">More details</a>
+                    </div>
+                </div>
+			    <div class="clearfix"> </div>
+			    <div class="content-top1">
                     <div class="col-md-4 col-md4">
                         <div class="col-md1 simpleCart_shelfItem">
                             <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi1.png') }}" alt="" />
+                                <img class="img-responsive" src="{{ asset('frontend/images/pi6.png') }}" alt="" />
                             </a>
                             <h3><a href="single.html">Trouser</a></h3>
                             <div class="price">
@@ -78,55 +90,10 @@
                             </div>
                         </div>
                     </div>	
-                <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi3.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Palazoo</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                            
-                        </div>
-                    </div>	
-                <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi12.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Palazoo</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                            
-                        </div>
-                    </div>	
-                
-                <div class="clearfix"> </div>
-                </div>	
-                <div class="content-top1">
                     <div class="col-md-4 col-md4">
                         <div class="col-md1 simpleCart_shelfItem">
                             <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi9.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Trouser</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>	
-                <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi11.png') }}" alt="" />
+                                <img class="img-responsive" src="{{ asset('frontend/images/pi7.png') }}" alt="" />
                             </a>
                             <h3><a href="single.html">Jeans</a></h3>
                             <div class="price">
@@ -137,12 +104,12 @@
                             
                         </div>
                     </div>	
-                <div class="col-md-4 col-md4">
+                    <div class="col-md-4 col-md4">
                         <div class="col-md1 simpleCart_shelfItem">
                             <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi10.png') }}" alt="" />
+                                <img class="img-responsive" src="{{ asset('frontend/images/pi.png') }}" alt="" />
                             </a>
-                            <h3><a href="single.html">Trouser</a></h3>
+                            <h3><a href="single.html">Palazoo</a></h3>
                             <div class="price">
                                     <h5 class="item_price">$300</h5>
                                     <a href="#" class="item_add">Add To Cart</a>
@@ -152,14 +119,15 @@
                         </div>
                     </div>	
                 
-                <div class="clearfix"> </div>
-                </div>	
+                    <div class="clearfix"> </div>
+			    </div>		
             </div>
+            <!----->
             <div class="col-md-3 product-bottom">
                 <!--categories-->
                 <div class=" rsidebar span_1_of_left">
                     <h3 class="cate">Categories</h3>
-                        <ul class="menu-drop">
+                            <ul class="menu-drop">
                         <li class="item1"><a href="#">Men </a>
                             <ul class="cute">
                                 <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
@@ -181,7 +149,7 @@
                                 <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
                             </ul>
                         </li>
-                        <li class="item4"><a href="#">Accessories</a>
+                        <li class="item4"><a href="#">Accesories</a>
                             <ul class="cute">
                                 <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
                                 <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
@@ -191,9 +159,9 @@
                                 
                         <li class="item4"><a href="#">Shoes</a>
                             <ul class="cute">
-                                <li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="product.html">Automatic Fails </a></li>
+                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
+                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
+                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
                             </ul>
                         </li>
                     </ul>
@@ -269,13 +237,11 @@
                     </div>					
                 </div>
             </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    <!--//content-->
+		    <div class="clearfix"> </div>
+	    </div>
+	</div>
 @endsection
-
 @section('scripts')
-    @parent
+    @parent	
 
 @endsection
