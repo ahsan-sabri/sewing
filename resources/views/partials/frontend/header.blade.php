@@ -3,9 +3,13 @@
     <div class="header-top">
         <div class="container">
             <div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
-                <h1><a href="index.html">Youth <span>Fashion</span></a></h1>
+                <h1>
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('images/company/'. $logo) }}" alt="" width="50" height="50"> <span>{{ $name }}</span>
+                    </a>
+                </h1>
             </div>
-            <div class="col-sm-4 world animated wow fadeInRight" data-wow-delay=".5s">
+            <div class="col-sm-4 world animated wow fadeInRight" data-wow-delay=".5s" style="visibility: hidden">
                 <div class="cart box_1">
                     <a href="checkout.html">
                         <h3>
@@ -18,12 +22,11 @@
 
                 </div>
             </div>
-            <div class="col-sm-2 number animated wow fadeInRight" data-wow-delay=".5s">
-                <span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
-                <p>Call me</p>
+            <div class="col-sm-2 number animated wow fadeInRight" data-wow-delay=".5s" style="margin-top: 1%">
+                <i class="glyphicon glyphicon-phone"></i>{{ $company->mobile ?? '' }}
             </div>
             <div class="col-sm-2 search animated wow fadeInRight" data-wow-delay=".5s">
-                <a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i
+                <a class="play-icon popup-with-zoom-anim" href="javascript:;"><i
                         class="glyphicon glyphicon-search"> </i> </a>
             </div>
             <div class="clearfix"> </div>
@@ -49,8 +52,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="dropdown mega-dropdown active">
+                            <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                            <li class="dropdown mega-dropdown hidden">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span
                                         class="caret"></span></a>
                                 <div class="dropdown-menu mega-dropdown-menu">
@@ -79,7 +82,7 @@
 
                                 </div>
                             </li>
-                            <li class="dropdown mega-dropdown active">
+                            <li class="dropdown mega-dropdown hidden">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span
                                         class="caret"></span></a>
                                 <div class="dropdown-menu mega-dropdown-menu">
@@ -109,9 +112,10 @@
 
                                 </div>
                             </li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="account.html">Sign In</a></li>
-                            <li class="last"><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ url('/products') }}">Products</a></li>
+                            <li class=""><a href="javascript:;">About</a></li>
+                            <li class=""><a href="javascript:;">Services</a></li>
+                            <li class="last"><a href="javascript:;">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                     

@@ -6,50 +6,42 @@
             <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
                 <h6>Categories</h6>
                 <ul>
-                    <li><a href="products.html">Curabitur sapien</a></li>
-                    <li><a href="single.html">Dignissim purus</a></li>
-                    <li><a href="men.html">Tempus pretium</a></li>
-                    <li><a href="products.html">Dignissim neque</a></li>
-                    <li><a href="single.html">Ornared id aliquet</a></li>
+                    @foreach (\App\admin\Category::all() as $category)
+                        <li><a href="{{ url('/products') }}">{{ $category->name }}</a></li>
+                    @endforeach
 
                 </ul>
             </div>
             <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
-                <h6>Feature Projects</h6>
+                <h6>Featured Products</h6>
                 <ul>
-                    <li><a href="products.html">Dignissim purus</a></li>
-                    <li><a href="men.html">Curabitur sapien</a></li>
-                    <li><a href="single.html">Tempus pretium</a></li>
-                    <li><a href="men.html">Dignissim neque</a></li>
-                    <li><a href="products.html">Ornared id aliquet</a></li>
+                    @foreach (\App\admin\Product::featured()->limit(5)->get() as $product)
+                        <li><a href="{{ url('/details') }}">{{ $product->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-3 footer-bottom-cate animated wow fadeInRight" data-wow-delay=".5s">
-                <h6>Top Brands</h6>
+                <h6>Latest Products</h6>
                 <ul>
-                    <li><a href="products.html">Tempus pretium</a></li>
-                    <li><a href="single.html">Curabitur sapien</a></li>
-                    <li><a href="men.html">Dignissim purus</a></li>
-                    <li><a href="single.html">Dignissim neque</a></li>
-                    <li><a href="men.html">Ornared id aliquet</a></li>
-
-
+                    @foreach (\App\admin\Product::latest()->limit(5)->get() as $product)
+                        <li><a href="{{ url('/details') }}">{{ $product->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-3 footer-bottom-cate cate-bottom animated wow fadeInRight" data-wow-delay=".5s">
                 <h6>Our Address</h6>
                 <ul>
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 12th Avenue, 5th
-                        block, <span>Sydney.</span></li>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : {{ $company->address ?? '' }}</li>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a
-                            href="mailto:info@example.com">info@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +1234 567 567</li>
+                        href="{{ 'mailto:'. $company->email ?? '' }}">{{ $company->email ?? '' }}</a>
+                    </li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : {{ $company->mobile ?? '' }}</li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
             <p class="footer-class animated wow fadeInUp animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> © 2016 Youth Fashion
-                . All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> © 2020 {{ $company->name ?? '' }}
+                . All Rights Reserved | Developed by Ahsan Sabri </p>
         </div>
     </div>
 </div>

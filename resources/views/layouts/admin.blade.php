@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+    @php
+        $company = \App\admin\Company::first();
+        $logo = $company->logo ?? '';
+        $name = $company->name ?? '';
+    @endphp
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ $name }}</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/company/'. $logo) }}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" />
@@ -29,8 +35,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">
-            <span class="navbar-brand-full">{{ config('app.name') }}</span>
-            <span class="navbar-brand-minimized">{{ config('app.name') }}</span>
+            <span class="navbar-brand-full">
+                <img src="{{ asset('images/company/'. $logo) }}" alt="" width="40" height="40">{{ $name }}
+            </span>
+            <span class="navbar-brand-minimized">
+                <img src="{{ asset('images/company/'. $logo) }}" alt="{{ $name }}">
+            </span>
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>

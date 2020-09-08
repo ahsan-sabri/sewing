@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
-<!-- Added by HTTrack -->
+@php
+    $company = \App\admin\Company::first();
+    $logo = $company->logo ?? '';
+    $name = $company->name ?? '';
+@endphp
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!-- /Added by HTTrack -->
 @include('partials.frontend.head')
 <body>
     @include('partials.frontend.header')

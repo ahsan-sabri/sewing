@@ -3,8 +3,8 @@
 return [
     // user management
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'Users',
+        'title_singular' => 'User',
     ],
     'permission'     => [
         'title'          => 'Permissions',
@@ -69,8 +69,8 @@ return [
 
     //product management
     'productManagement' => [
-        'title'          => 'Product management',
-        'title_singular' => 'Product management',
+        'title'          => 'Products',
+        'title_singular' => 'Product',
     ],
     'product'           => [
         'title'          => 'Products',
@@ -176,8 +176,8 @@ return [
 
     //Frontend Management
     'frontendManagement' => [
-        'title'          => 'Frontend management',
-        'title_singular' => 'Frontend management',
+        'title'          => 'Frontend',
+        'title_singular' => 'Frontend',
     ],
 
 

@@ -66,7 +66,7 @@ $frontendMenuOpen = request()->is($frontendManageRoutes) ? 'open' : '';
                         {{ trans('cruds.productManagement.title') }}
                     </a>
                     <ul class="nav-dropdown-items">
-                        @can('modules_manage')
+                        {{-- @can('modules_manage')
                             <li class="nav-item">
                                 <a href="{{ route("admin.modules.index") }}" class="nav-link {{ request()->is('admin/modules*') ? 'active' : '' }}">
                                     <i class="fa-fw fas fa-cubes nav-icon">
@@ -75,7 +75,7 @@ $frontendMenuOpen = request()->is($frontendManageRoutes) ? 'open' : '';
                                     {{ trans('cruds.module.title') }}
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
                         @can('categories_manage')
                             <li class="nav-item">

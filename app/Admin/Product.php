@@ -18,9 +18,19 @@ class Product extends Model
         return $this->belongsTo('App\Admin\SubCategory', 'subcategory_id', 'id');
     }
 
-    // public function images()
-    // {
-    //     return $this->hasMany('App\Admin\ProductImage', 'product_image');
-    // }
+    public static function active()
+    {
+    return self::where('is_active', 1);
+    }
+
+    public static function featured()
+    {
+    return self::active()->where('is_featured', 1);
+    }
+
+    public static function latest()
+    {
+    return self::active()->where('is_latest', 1);
+    }
 
 }

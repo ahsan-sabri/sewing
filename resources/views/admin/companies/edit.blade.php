@@ -54,7 +54,7 @@
         
             {{-- address --}}
             <div class="form-group {{ $errors->has('address') ? 'has-error' : '' }}">
-                <label for="address">{{ trans('cruds.plan.fields.desc') }}</label>
+                <label for="address">{{ trans('cruds.company.fields.address') }}</label>
                 <input type="textarea" id="address" row="3" name="address" class="form-control" value="{{ old('address', isset($company) ? $company->address : '') }}">
                 @if($errors->has('address'))
                     <em class="invalid-feedback">

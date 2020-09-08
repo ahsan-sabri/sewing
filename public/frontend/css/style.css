@@ -1966,7 +1966,7 @@ select.in-drop, select.in-drop1 {
     width: 38%;
 }
 .logo img{
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
 }
 .number {
@@ -2126,7 +2126,7 @@ select.in-drop, select.in-drop1 {
     text-align: center;
 }
 .logo img {
-  width: 29%;
+  /* width: 29%; */
 }
 .search {
   width: 25%;
@@ -2400,9 +2400,9 @@ ul.callbacks_tabs.callbacks1_tabs {
     padding: 0;
 	text-align:left;
 }
-.logo img {
+/* .logo img {
   width: 46%;
-}
+} */
 .number p {
     color: #403b37;
     font-size: 0.85em;
