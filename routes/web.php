@@ -10,3 +10,6 @@ include 'admin.php';
 
 //front end routes
 include 'frontend.php';
+
+//ajax routes
+include 'ajax.php';

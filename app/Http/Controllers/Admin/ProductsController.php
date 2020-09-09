@@ -115,7 +115,9 @@ class ProductsController extends Controller
         }
 
         $categories = Category::get()->pluck('name', 'id');
-        $subcategories = Subcategory::get()->pluck('name', 'id');
+        // $subcategories = Subcategory::get()->pluck('name', 'id');
+        $subcategories = $product->category->subcategories->pluck('name', 'id');
+        // dd($subcategories);
 
         return view('admin.products.edit', compact('product','categories','subcategories'));
     }
