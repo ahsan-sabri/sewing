@@ -1,325 +1,799 @@
 @extends('layouts.frontend')
 
 @section('styles')
-	@parent
-	
+    @parent
+
 @endsection
 
 @section('content')
-    <!--banner-->
-    <div class="banner">
-        <div class="matter-banner">
-            <div class="slider">
-                <div class="callbacks_container">
-                    <ul class="rslides" id="slider">
-                        <li>
-                            <img src="{{ asset('frontend/images/1.jpg') }}" alt="">
-                            <div class="tes animated wow fadeInUp animated" data-wow-delay=".5s"
-                                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                <h2>MEN & WOMEN</h2>
-                                <h3>Trousers & Chinos</h3>
-                                <h4>UPTO 50%</h4>
-                                <p>OFFER</p>
+    <main id="main">
+        <!-- ======= Cliens Section ======= -->
+        <section id="cliens" class="cliens section-bg">
+            <div class="container">
+
+                <div class="row" data-aos="zoom-in">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Cliens Section -->
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <h3 style="color: #37517e;">Concern</h3>
+                        <p>
+                            100% Export Oriented Garments Business with it’s valuable foreign customers in USA, EU & in
+                            Japan.
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> We believe in precedence of quality & customer’s
+                                requirement.
+                            </li>
+                            <li><i class="ri-check-double-line"></i> We are committed to provide satisfactory good quality
+                                products.</li>
+                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <h3 style="color: #37517e;">History</h3>
+                        <p class="text-justify">
+                            TexExclusive has started on 2007 with it’s cordial service. After 2 years, been hold it’s
+                            activity then. Finally has Revived it on 2017 with it’s new strength and sending-off previous
+                            slipups.
+                        </p>
+                        <p class="text-justify"> It has been restarted with association of Garments Business/ Industry
+                            related persons having
+                            long experience about 20y’s plus, who are much concerned in Quality issue & Timely delivery.
+                        </p>
+                        <p class="text-justify">So, Customers in USA & EU are comfortable to operate their orders with us as
+                            well as our Japanese
+                            customers who are comfortable with our dealings to take garments using their own quality
+                            management system.
+                        </p>
+                        {{-- <a href="#" class="btn-learn-more">Learn More</a>
+                        --}}
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Us Section -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us section-bg pb-0">
+            <div class="container-fluid" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                        <div class="content">
+                            <h3><strong>Why work with us</strong></h3>
+                            <p class="text-justify">
+                                Things which make us different and reliable globally are lot to describe. But you can focus
+                                easily to us with some key values.
+                            </p>
+                        </div>
+
+                        <div class="accordion-list">
+                            <ul>
+                                <li>
+                                    <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span>
+                                        Certifications
+                                        <i class="bx bx-chevron-down icon-show"></i>
+                                        <i class="bx bx-chevron-up icon-close"></i>
+                                    </a>
+                                    <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                                        <p class="text-justify">
+                                            TexExclusive is preparing & elevating ourselves to meat Certification tests
+                                            attending ISO for its own.
+                                        </p>
+                                        <p class="text-justify">
+                                            Our sourced Factories have different standards of Certifications, such as ISO,
+                                            ACCORD, OEKO-TEX, LEED, WRAP, BSCI etc.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>
+                                        Machines <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
+                                        <p class="text-justify">
+                                            Our factories have good quality Brand Machines like JUKI, BROTHERS, KANSAI,
+                                            PEGASUS etc in prdn lines.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span>
+                                        Valid Government Licenses <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                                        <p class="text-justify">
+                                            Trade License #- TRAD/DSCC/223309/2019 <br>
+                                            TIN - 462900446800 <br>
+                                            BIN - 002291994-0208 <br>
+                                            Export Registration Certificate No. - 260326210417520
+
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span>
+                                        Quality Team <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
+                                        <p class="text-justify">
+                                            All garments are passed through strict quality checking while production time.
+                                            So, we had to make an independent & dominant “Quality Control Team” to maintain
+                                            customers required quality at best level, who are always remain stationed at
+                                            sample making & production unit.
+
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+                        style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">
+                        &nbsp;</div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
+
+        {{--
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="skills">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="assets/img/skills.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                        <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+                        <p class="font-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua.
+                        </p>
+
+                        <div class="skills-content">
+
+                            <div class="progress">
+                                <span class="skill">HTML <i class="val">100%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">CSS <i class="val">90%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">JavaScript <i class="val">75%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">Photoshop <i class="val">55%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Skills Section --> --}}
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <p>We don't want to push our ideas on to customers, we simply want to make what they want.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="javascript:;">Products</a></h4>
+                            <p>We are experienced on all kinds of garments for Men’s, Lady’s & Childern’s.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4><a href="javascript:;">Variations</a></h4>
+                            <p><strong>Woven Items:</strong><br> Shirts/ Tops/ Trousers/ Shorts / Jackets and also
+                                Medical Scrubs/ Kitchen Aprons/ Chef Coats/ Cap etc.<br>
+                                <strong>Knit Items:</strong><br> T-shirts/Polo Shirt/ Trousers/ Shorts/ Leggings and also
+                                Fleece Jackets/ Vests etc. <br>
+                                <strong>Sweaters:</strong><br> Sweaters /Cardigan /Vests
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4><a href="javascript:;">Production Lead Time
+                                </a></h4>
+                            <p><strong>35~90 days</strong> if Fabric/Yarn is Locally arranged. <br>
+                                <strong>90~120 days</strong> if Fabric/Yarn need to be Imported.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                        data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-layer"></i></div>
+                            <h4><a href="javascript:;">Minimum Order Qnty
+                                </a></h4>
+                            <p><strong>Any Quantity</strong> by discussion. <br>
+                                Some times we do very <strong>small quantity</strong> to support our valuable customers.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+        {{--
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-left">
+                        <h3>Call To Action</h3>
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Call To Action</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Cta Section --> --}}
+
+        <!-- ======= Portfolio Section ======= -->
+        {{-- <section id="portfolio" class="portfolio">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">App</li>
+                    <li data-filter=".filter-card">Card</li>
+                    <li data-filter=".filter-web">Web</li>
+                </ul>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>App 1</h4>
+                            <p>App</p>
+                            <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Web 3</h4>
+                            <p>Web</p>
+                            <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>App 2</h4>
+                            <p>App</p>
+                            <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Card 2</h4>
+                            <p>Card</p>
+                            <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Web 2</h4>
+                            <p>Web</p>
+                            <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>App 3</h4>
+                            <p>App</p>
+                            <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Card 1</h4>
+                            <p>Card</p>
+                            <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Card 3</h4>
+                            <p>Card</p>
+                            <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Web 3</h4>
+                            <p>Web</p>
+                            <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery"
+                                class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                                    class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section --> --}}
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Team</h2>
+                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+                        ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Hassan Jahangir</h4>
+                                <span>CEO, TexExclusive</span>
+                                <p>Director, Space Garments Ind. Ltd.</p>
+                                <p>Phone- +88 01556 350315</p>
+                                <p>Email- hassan@texexclusive.com</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Rubel Ahmed</h4>
+                                <span>Executive Director</span>
+                                <p>Phone- +88 01556 350315</p>
+                                <p>Email- rubel@texexclusive.com</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Nighat Shima</h4>
+                                <span>Director</span>
+                                <p>Phone- +88 01556 350315</p>
+                                <p>Email- nighat@texexclusive.com</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Mohammad Khashruzzaman</h4>
+                                <span>Director, Marketing</span>
+                                <p>Phone-  +61 422 863 485</p>
+                                <p>Email- khasruzzaman@texexclusive.com</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+        {{--
+        <!-- ======= Pricing Section ======= -->
+        <section id="pricing" class="pricing">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Pricing</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h3>Free Plan</h3>
+                            <h4><sup>$</sup>0<span>per month</span></h4>
+                            <ul>
+                                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                            </ul>
+                            <a href="#" class="buy-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box featured">
+                            <h3>Business Plan</h3>
+                            <h4><sup>$</sup>29<span>per month</span></h4>
+                            <ul>
+                                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+                            </ul>
+                            <a href="#" class="buy-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="box">
+                            <h3>Developer Plan</h3>
+                            <h4><sup>$</sup>49<span>per month</span></h4>
+                            <ul>
+                                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+                            </ul>
+                            <a href="#" class="buy-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Pricing Section -->
+
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="faq-list">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse"
+                                href="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
+                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                                <p>
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                                    curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+                                    non.
+                                </p>
                             </div>
                         </li>
-                        <li>
-                            <img src="{{ asset('frontend/images/3.jpg') }}" alt="">
-                            <div class="tes animated wow fadeInUp animated" data-wow-delay=".5s"
-                                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                <h2>MEN & WOMEN</h2>
-                                <h3>Trousers & Chinos</h3>
-                                <h4>UPTO 50%</h4>
-                                <p>OFFER</p>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2"
+                                class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i
+                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+                                    velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
+                                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
+                                    turpis massa tincidunt dui.
+                                </p>
                             </div>
                         </li>
-                        <li>
-                            <img src="{{ asset('frontend/images/2.jpg') }}" alt="">
-                            <div class="tes animated wow fadeInUp animated" data-wow-delay=".5s"
-                                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                <h2>MEN & WOMEN</h2>
-                                <h3>Trousers & Chinos</h3>
-                                <h4>UPTO 50%</h4>
-                                <p>OFFER</p>
+
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3"
+                                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
+                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                                <p>
+                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
+                                    pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+                                    tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
+                                    molestie at elementum eu facilisis sed odio morbi quis
+                                </p>
                             </div>
                         </li>
+
+                        <li data-aos="fade-up" data-aos-delay="400">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4"
+                                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
+                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                                <p>
+                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
+                                    ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
+                                    adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="500">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5"
+                                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc
+                                eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+                                <p>
+                                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
+                                    integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
+                                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                                </p>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
+
             </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-    <!--//banner-->
+        </section><!-- End Frequently Asked Questions Section --> --}}
 
-    <!--content-->
-	<div class="content">
-		<div class="container">
-			<div class="content-top">
-				<div class="content-top1">
-					<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi5.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Palazzo</a></h3>
-							<div class="price">
-								<h5 class="item_price">$450</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 animated wow fadeInDown animated" data-wow-delay=".5s"
-						style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-						<div class="col-md3">
-							<div class="up-t">
-								<h3>Flat 50% Offer</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi4.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Pant</a></h3>
-							<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="content-top1">
-					<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi3.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Palazoo</a></h3>
-							<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi2.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Trouser</a></h3>
-							<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi6.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Trouser</a></h3>
-							<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-md2 cmn animated wow fadeInRight" data-wow-delay=".5s">
-						<div class="col-md1 simpleCart_shelfItem">
-							<a href="single.html">
-								<img class="img-responsive" src="{{ asset('frontend/images/pi8.png') }}" alt="" />
-							</a>
-							<h3><a href="single.html">Palazoo</a></h3>
-							<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--//content-->
-	<div class="con-tp">
-		<div class="container">
-			<div class="col-md-4 con-tp-lft animated wow fadeInLeft" data-wow-delay=".5s">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/6.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>30%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 con-tp-lft animated wow fadeInDown animated" data-wow-delay=".5s"
-				style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/10.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>45%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 con-tp-lft animated wow fadeInRight" data-wow-delay=".5s">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/9.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>50%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-4 con-tp-lft animated wow fadeInLeft" data-wow-delay=".5s">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/12.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>25%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 con-tp-lft animated wow fadeInUp animated" data-wow-delay=".5s"
-				style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/13.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>50%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 con-tp-lft animated wow fadeInRight" data-wow-delay=".5s">
-				<a href="products.html">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="{{ asset('frontend/images/14.jpg') }}" alt="image" class="img-responsive zoom-img"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-								<h4>35%offer</h4>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<div class="c-btm">
-		<div class="content-top1">
-			<div class="container">
-				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="{{ asset('frontend/images/pi9.png') }}" alt="" />
-						</a>
-						<h3><a href="single.html">Trousers</a></h3>
-						<div class="price">
-							<h5 class="item_price">$300</h5>
-							<a href="#" class="item_add">Add To Cart</a>
-							<div class="clearfix"> </div>
-						</div>
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
 
-					</div>
-				</div>
-				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="{{ asset('frontend/images/pi10.png') }}" alt="" />
-						</a>
-						<h3><a href="single.html">Formal</a></h3>
-						<div class="price">
-							<h5 class="item_price">$450</h5>
-							<a href="#" class="item_add">Add To Cart</a>
-							<div class="clearfix"> </div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="{{ asset('frontend/images/pi11.png') }}" alt="" />
-						</a>
-						<h3><a href="single.html">Trousers</a></h3>
-						<div class="price">
-							<h5 class="item_price">$350</h5>
-							<a href="#" class="item_add">Add To Cart</a>
-							<div class="clearfix"> </div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="{{ asset('frontend/images/pi12.png') }}" alt="" />
-						</a>
-						<h3><a href="single.html">Formal</a></h3>
-						<div class="price">
-							<h5 class="item_price">$400</h5>
-							<a href="#" class="item_add">Add To Cart</a>
-							<div class="clearfix"> </div>
-						</div>
-
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-        <div class="footer-top">
-            <div class="col-md-6 top-footer animated wow fadeInLeft" data-wow-delay=".5s">
-                <h3>Follow Us On</h3>
-                <div class="social-icons">
-                    <ul class="social">
-                        <li><a href="#"><i></i></a> </li>
-                        <li><a href="#"><i class="facebook"></i></a></li>
-                        <li><a href="#"><i class="google"></i> </a></li>
-                        <li><a href="#"><i class="linked"></i> </a></li>
-                    </ul>
-                    <div class="clearfix"></div>
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                        fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch">
+                        <div class="info">
+                            <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <h4>Location:</h4>
+                                <p>{{ $company->address ?? '' }}</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>{{ $company->email ?? '' }}</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone"></i>
+                                <h4>Call:</h4>
+                                <p>{{ $company->mobile ?? '' }}</p>
+                            </div>
+
+                            {{-- <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                            --}}
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="name">Your Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" data-rule="email"
+                                        data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Subject</label>
+                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Message</label>
+                                <textarea class="form-control" name="message" rows="10" data-rule="required"
+                                    data-msg="Please write something for us"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="col-md-6 top-footer1 animated wow fadeInRight" data-wow-delay=".5s">
-                <h3>Newsletter</h3>
-                <form action="#" method="post">
-                    <input type="text" name="email" value="" onfocus="this.value='';"
-                        onblur="if (this.value == '') {this.value ='';}">
-                    <input type="submit" value="SUBSCRIBE">
-                </form>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
 @endsection
 
 @section('scripts')
     @parent
+
 @endsection

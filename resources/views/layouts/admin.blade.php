@@ -13,7 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $name }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('images/company/'. $logo) }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/company/icon.png') }}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" />
@@ -34,9 +34,9 @@
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <span class="navbar-brand-full">
-                <img src="{{ asset('images/company/'. $logo) }}" alt="" width="40" height="40">{{ $name }}
+                <img src="{{ asset('images/company/'. $logo) }}" alt="" width="150" height="40">
             </span>
             <span class="navbar-brand-minimized">
                 <img src="{{ asset('images/company/'. $logo) }}" alt="{{ $name }}">

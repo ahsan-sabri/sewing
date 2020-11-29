@@ -1,136 +1,79 @@
-<!--footer-->
-<div class="footer">
-    
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
-                <h6>Categories</h6>
-                <ul>
-                    @foreach (\App\admin\Category::all() as $category)
-                        <li><a href="{{ url('/products') }}">{{ $category->name }}</a></li>
-                    @endforeach
+<!-- ======= Footer ======= -->
+<footer id="footer">
 
-                </ul>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Texexclusive</h3>
+                    <p>
+                        {{ $company->address }} <br>
+                        <strong>Phone:</strong> {{ $company->mobile }}<br>
+                        <strong>Email:</strong> {{ $company->email }}<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/products') }}">Products</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Wooven Item</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Knit Item</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Sweaters</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-3 footer-bottom-cate animated wow fadeInLeft" data-wow-delay=".5s">
-                <h6>Featured Products</h6>
-                <ul>
-                    @foreach (\App\admin\Product::featured()->limit(5)->get() as $product)
-                        <li><a href="{{ url('/details') }}">{{ $product->name }}</a></li>
-                    @endforeach
-                </ul>
-            </div>
-            <div class="col-md-3 footer-bottom-cate animated wow fadeInRight" data-wow-delay=".5s">
-                <h6>Latest Products</h6>
-                <ul>
-                    @foreach (\App\admin\Product::latest()->limit(5)->get() as $product)
-                        <li><a href="{{ url('/details') }}">{{ $product->name }}</a></li>
-                    @endforeach
-                </ul>
-            </div>
-            <div class="col-md-3 footer-bottom-cate cate-bottom animated wow fadeInRight" data-wow-delay=".5s">
-                <h6>Our Address</h6>
-                <ul>
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : {{ $company->address ?? '' }}</li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a
-                        href="{{ 'mailto:'. $company->email ?? '' }}">{{ $company->email ?? '' }}</a>
-                    </li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : {{ $company->mobile ?? '' }}</li>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-            <p class="footer-class animated wow fadeInUp animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> © 2020 {{ $company->name ?? '' }}
-                . All Rights Reserved | Developed by Ahsan Sabri </p>
         </div>
     </div>
-</div>
 
-{{-- scripts --}}
-<script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
-<script
-    type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
-<!-- start menu -->
-<script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('frontend/js/simpleCart.min.js') }}"> </script>
-<!-- slide -->
-<script src="{{ asset('frontend/js/responsiveslides.min.js') }}"></script>
-{{-- animated wow js --}}
-<script src="{{ asset('frontend/js/wow.min.js') }}"></script>
-{{-- magnifying pop up --}}
-<script src="{{ asset('frontend/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
-{{-- image zoom  --}}
-<script src="{{ asset('frontend/js/imagezoom.js') }}"></script>
-<!-- FlexSlider -->
-<script defer src="{{ asset('frontend/js/jquery.flexslider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('frontend/js/memenu.js') }}"></script>
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Texexclusive</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            
+            Designed by <a href="http://texexclusive.com/">Texexclusive</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
 
-<script>
-    ///// wow init 
-    // new WOW().init();
+<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+<div id="preloader"></div>
 
-    ///// popup zoom script 
-    $(document).ready(function () {
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
+<!-- Vendor JS Files -->
+<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+<script src="{{ asset('assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
 
-        $(".memenu").memenu();   
-
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
-
-        $('.flexslider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails"
-        });
-    });
-
-    ///// slide
-    $(function () {
-        $("#slider").responsiveSlides({
-            auto: false,
-            speed: 500,
-            namespace: "callbacks",
-            pager: true,
-        });
-    });
-
-    $(function() {
-        var menu_ul = $('.menu-drop > li > ul'),
-            menu_a  = $('.menu-drop > li > a');
-        menu_ul.hide();
-        menu_a.click(function(e) {
-            e.preventDefault();
-            if(!$(this).hasClass('active')) {
-                menu_a.removeClass('active');
-                menu_ul.filter(':visible').slideUp('normal');
-                $(this).addClass('active').next().stop(true,true).slideDown('normal');
-            } else {
-                $(this).removeClass('active');
-                $(this).next().stop(true,true).slideUp('normal');
-            }
-        });
-    
-    });
-</script>
+<!-- Template Main JS File -->
+<script src="{{ asset('assets/js/main.js') }}"></script>
 
 @yield('scripts')

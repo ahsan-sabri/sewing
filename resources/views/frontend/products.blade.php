@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+@extends('layouts.product')
 
 @section('styles')
     @parent
@@ -25,7 +25,7 @@
 @endsection
 
 @section('content')
-    <div class="breadcrumbs">
+    <div class="breadcrumbs" style="margin-top: 160px">
         <div class="container">
             <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s"
                 style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
