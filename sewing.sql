@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2020 at 02:05 PM
+-- Generation Time: Sep 10, 2020 at 01:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -63,7 +63,9 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `name`, `slug`, `desc`, `created_at`, `updated_at`) VALUES
 (1, 'Men\'s Wear', 'men', NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (2, 'Women\'s Wear', 'women', NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
-(3, 'Kid\'s Zone', 'kid', NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54');
+(3, 'Kid\'s Zone', 'kid', NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
+(4, 'Surgical Wear', 'surgical', NULL, '2020-09-09 22:12:12', '2020-09-09 22:12:12'),
+(6, 'test', 'test', NULL, '2020-09-10 00:53:49', '2020-09-10 00:53:49');
 
 -- --------------------------------------------------------
 
@@ -233,17 +235,20 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `code`, `price`, `category_id`, `subcategory_id`, `short_desc`, `long_desc`, `featured_image`, `other_images`, `is_featured`, `is_latest`, `is_active`, `created_at`, `updated_at`) VALUES
-(3, 'Trouser', 'Ts-01', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(5, 'Trouser1', 'Ts-02', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(6, 'Trouser2', 'Ts-03', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(7, 'Trouser3', 'Ts-04', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(8, 'Trouser4', 'Ts-05', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(9, 'Trouser5', 'Ts-06', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(10, 'Trouser6', 'Ts-07', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(11, 'Trouser7', 'Ts-08', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(12, 'Trouser8', 'Ts-09', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
+(3, 'Trouser', 'Ts-01', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'iYbtFEN602.png', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:27:15'),
+(5, 'Trouser1', 'Ts-02', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'u4RC3p1v5C.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:25:06'),
+(6, 'Trouser2', 'Ts-03', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'qy0jY7nA12.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:25:36'),
+(7, 'Trouser3', 'Ts-04', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'l17nGuzVEq.png', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:27:50'),
+(8, 'Trouser4', 'Ts-05', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'fnMyCNZyNd.png', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:28:14'),
+(9, 'Trouser5', 'Ts-06', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'TL0uKR2kxR.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:25:53'),
+(10, 'Trouser6', 'Ts-07', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'mIjMnjXQNS.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:29:42'),
+(11, 'Trouser7', 'Ts-08', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'KjO9kCaYRX.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:30:20'),
+(12, 'Trouser8', 'Ts-09', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', '7al3S5DJJo.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-10 01:30:38'),
 (13, 'Trouser9', 'Ts-10', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
-(14, 'Trouser10', 'Ts-11', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27');
+(14, 'Trouser10', 'Ts-11', NULL, 2, 9, '100 % Cotton', 'Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit. Lorem ipsum dolores sit amit.', 'F04MQrZlLi.jpg', '[\"wc7itwghwQ.jpg\",\"1vPnA6twGW.jpg\"]', 1, 1, 1, '2020-04-14 07:49:38', '2020-09-07 02:56:27'),
+(15, 'Surgical Musk', 'Sm-01', NULL, 4, NULL, 'Safe & reliable 5 layer musk', NULL, 'CbOqPbwNLs.jpg', NULL, 1, 0, 1, '2020-09-09 22:14:40', '2020-09-09 22:14:40'),
+(16, 'Gabardin Pant', 'MG-01', NULL, 1, 2, 'Slim fit all available size', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.', 'zHsCuC73E9.jpg', '[\"tkxuPpvdwH.jpg\",\"AP56RIeqOo.png\",\"lbRpBQ1dlB.png\"]', 0, 1, 1, '2020-09-09 22:18:07', '2020-09-10 05:19:14'),
+(20, 'Test', 'ssfs', NULL, 6, NULL, NULL, NULL, '9PsgWSEP5B.jpg', NULL, 0, 0, 1, '2020-09-10 00:54:19', '2020-09-10 00:54:19');
 
 -- --------------------------------------------------------
 
@@ -312,15 +317,14 @@ CREATE TABLE `subcategories` (
 --
 
 INSERT INTO `subcategories` (`id`, `name`, `slug`, `category_id`, `desc`, `created_at`, `updated_at`) VALUES
-(1, 'Shirt', 'srt', 2, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
+(1, 'Shirt', 'srt', 1, NULL, '2020-04-14 05:48:54', '2020-09-10 00:36:23'),
 (2, 'Pant', 'pnt', 1, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (3, 'Jacket', 'jkt', 2, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (4, 'Swetter', 'swt', 2, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
-(5, 'Glass', 'gls', 2, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (6, 'Watch', 'wtc', 3, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (7, 'T-Shirt', 'tsrt', 3, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
 (8, 'Sports', 'spt', 3, NULL, '2020-04-14 05:48:54', '2020-04-14 05:48:54'),
-(9, 'Trouser', 'trouser', 2, NULL, '2020-09-07 02:52:02', '2020-09-07 02:52:02');
+(9, 'Trouser', 'trouser', 2, NULL, '2020-09-07 02:52:02', '2020-09-10 00:36:06');
 
 -- --------------------------------------------------------
 
@@ -451,7 +455,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `companies`
@@ -481,7 +485,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -493,7 +497,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `subcategories`
 --
 ALTER TABLE `subcategories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`

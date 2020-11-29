@@ -97,9 +97,11 @@
                             {{ trans('cruds.product.fields.other_images') }}
                         </th>
                         <td>
-                            @foreach (json_decode($product->other_images) as $key => $image)
-                                <img src="{{ asset('images/product/'. $image) }}" alt="" class="w-25 p-3">
-                            @endforeach
+                            @if ($product->other_images)
+                                @foreach (json_decode($product->other_images) as $key => $image)
+                                    <img src="{{ asset('images/product/'. $image) }}" alt="" class="w-25 p-3">
+                                @endforeach
+                            @endif
                         </td>
                     </tr>
                 </tbody>

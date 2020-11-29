@@ -19,7 +19,9 @@ class CreateProductsTable extends Migration
             $table->string('code')->unique();
             $table->float('price', 8, 2)->nullable();
             $table->smallInteger('category_id');
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->mediumInteger('subcategory_id')->nullable();
+            // $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
             $table->string('short_desc')->nullable();
             $table->longtext('long_desc')->nullable();
             $table->string('featured_image');

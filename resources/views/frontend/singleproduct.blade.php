@@ -2,6 +2,37 @@
 
 @section('styles')
     @parent
+    <style>
+        .related_zero {
+            margin: 0.5em 0;
+            color: #B2B2B2;
+        }
+        .related-pro {
+            font-size: 1.5em;
+            color: #fa03bb;
+            line-height: 1.5em;
+            font-family: 'Poiret One', cursive;
+            font-weight: 700;
+            margin-top: 50px;
+        }
+        .flex-control-thumbs li {
+            height: 130px;
+        }
+
+        .flex-control-thumbs li img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .thumb-image {
+            height: 400px;
+        }
+        .flexslider .slides img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
 @endsection
 
@@ -13,7 +44,9 @@
                 <li><a href="{{ url('/') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li><a href="{{ url('products') }}">Products</a></li>
                 <li><a href="{{ url('products/'.$product->category->id) }}">{{ $product->category->name }}</a></li>
-                <li><a href="{{ url('products/'.$product->category->id.'/'.$product->subcategory->id) }}">{{ $product->subcategory->name }}</a></li>
+                @if ($product->subcategory)
+                    <li><a href="{{ url('products/'.$product->category->id.'/'.$product->subcategory->id) }}">{{ $product->subcategory->name }}</a></li>
+                @endif
                 <li class="active">{{ $product->name }}</li>
             </ol>
         </div>
@@ -21,32 +54,94 @@
     <div class="single">
 
         <div class="container">
+            <div class="col-md-3">
+                <!--categories-->
+                <div class=" rsidebar span_1_of_left">
+                    <h3 class="cate">Categories</h3>
+                    <ul class="menu-drop">
+                        @foreach ($categories as $category)
+                            <li class="">
+                                <span><a href="{{ url('products/'.$category->id) }}">{{ $category->name }}</a></span>
+                                <a href="" class="@if (!$category->subcategories->count()) hidden @endif">
+                                    <span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                                <ul class="cute">
+                                    @foreach ($category->subcategories as $item)
+                                        <li class=""><a href="{{ url('products/'.$category->id. '/' .$item->id) }}">{{ $item->name }} </a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <!--initiate accordion-->
+
+                <!--//menu-->
+                <!--seller-->
+                <div class="product-bottom">
+                    <h3 class="cate">Featured Products</h3>
+                    @if ($featured_products->count() > 0)
+                        @foreach ($featured_products as $featured_product)
+                            <div class="product-go">
+                                <div class=" fashion-grid">
+                                    <a href="{{ url('product/details/' . $featured_product->id) }}">
+                                        <img class="img-responsive " src="{{ asset('/images/product/' . $featured_product->featured_image) }}" alt="">
+                                    </a>
+                                </div>
+                                <div class=" fashion-grid1">
+                                    <h6 class="best2">
+                                        <a href="{{ url('product/details/' . $featured_product->id) }}">{{ $featured_product->name }}</a>
+                                    </h6>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        @endforeach
+                    @else
+                        <h5 class="featured_zero">No featured items.</h5>
+                    @endif
+
+
+
+                </div>
+
+                <!--//seller-->
+                <!--tag-->
+                <div class="tag"></div>
+            </div>
             <div class="col-md-9">
                 <div class="col-md-5 grid">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="{{ asset('frontend/images/si.jpg') }}">
-                                <div class="thumb-image"> <img src="{{ asset('frontend/images/si.jpg') }}"
+                            <li data-thumb="{{ asset('/images/product/' . $product->featured_image) }}">
+                                <div class="thumb-image"> <img src="{{ asset('/images/product/' . $product->featured_image) }}"
                                         data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="{{ asset('frontend/images/si1.jpg') }}">
-                                <div class="thumb-image"> <img src="{{ asset('frontend/images/si1.jpg') }}"
-                                        data-imagezoom="true" class="img-responsive"> </div>
-                            </li>
-                            <li data-thumb="{{ asset('frontend/images/si2.jpg') }}">
-                                <div class="thumb-image"> <img src="{{ asset('frontend/images/si2.jpg') }}"
-                                        data-imagezoom="true" class="img-responsive"> </div>
-                            </li>
+                            @if ($other_images)
+                                @php
+                                    $i = 0;
+                                @endphp
+                                @foreach ($other_images as $other_image)
+                                    <li data-thumb="{{ asset('/images/product/' . $other_image) }}">
+                                        <div class="thumb-image"> <img src="{{ asset('/images/product/' . $other_image) }}"
+                                                data-imagezoom="true" class="img-responsive"> </div>
+                                    </li>
+                                    @php
+                                        $i++;
+                                        if ($i == 2) {
+                                            break;
+                                        }
+                                    @endphp
+                                @endforeach
+                            @endif
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-7 single-top-in">
                     <div class="single-para simpleCart_shelfItem">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of
-                            classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                        <div class="star-on">
+                        <h2>{{ $product->name }}</h2>
+                        <p>{{ $product->short_desc }}</p>
+                        {{-- <div class="star-on">
                             <ul>
                                 <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
                                 <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
@@ -59,9 +154,9 @@
                                 <a href="#"> Write a review</a>
                             </div>
                             <div class="clearfix"> </div>
-                        </div>
+                        </div> --}}
 
-                        <label class="add-to item_price">$70.5</label>
+                        <label class="add-to item_price hidden">$70.5</label>
 
                         <div class="available">
                             <h6>Available Options :</h6>
@@ -81,180 +176,54 @@
                                     </select></li>
                             </ul>
                         </div>
-                        <a href="#" class="cart item_add">More details</a>
+                        <a href="javascript:;" class="cart item_add show_details">More details</a>
+                        <p class="long_desc" style="display:none; margin-top: 10px">{{ $product->long_desc }}</p>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
+                <h2 class="related-pro text-center">Related Products</h2>
                 <div class="content-top1">
-                    <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi6.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Trouser</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi7.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Jeans</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
+                    @if ($related_products->count())
 
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md4">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{ asset('frontend/images/pi.png') }}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Palazoo</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
+                        @foreach ($related_products as $item)
+                            <div class="col-md-4 col-md4">
+                                <div class="col-md1 simpleCart_shelfItem">
+                                    <div class="image-container">
+                                        <a href="{{ url('product/details/' . $item->id) }}">
+                                            <img class="img-responsive card-image" src="{{ asset('/images/product/' . $item->featured_image) }}" alt="" />
+                                        </a>
+                                    </div>
+                                    
+                                    <h3><a href="{{ url('product/details/' . $item->id) }}">{{ $item->name }}</a></h3>
+                                    <div class="price hidden">
+                                        <h5 class="item_price">$300</h5>
+                                        <a href="#" class="item_add">Add To Cart</a>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                </div>
                             </div>
+                        @endforeach
 
-                        </div>
-                    </div>
+                    @else
+                        <h5 class="related_zero">No related items.</h5>
+
+                    @endif
+                    
 
                     <div class="clearfix"> </div>
                 </div>
             </div>
             <!----->
-            <div class="col-md-3 product-bottom">
-                <!--categories-->
-                <div class=" rsidebar span_1_of_left">
-                    <h3 class="cate">Categories</h3>
-                    <ul class="menu-drop">
-                        <li class="item1"><a href="#">Men </a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
-                        <li class="item2"><a href="#">Women </a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
-                        <li class="item3"><a href="#">Kids</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                            </ul>
-                        </li>
-                        <li class="item4"><a href="#">Accesories</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="item4"><a href="#">Shoes</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!--initiate accordion-->
-
-                <!--//menu-->
-                <!--seller-->
-                <div class="product-bottom">
-                    <h3 class="cate">Best Sellers</h3>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="{{ asset('frontend/images/pr.jpg') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a></h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="{{ asset('frontend/images/pr1.jpg') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a></h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="{{ asset('frontend/images/pr2.jpg') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a></h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="{{ asset('frontend/images/pr3.jpg') }}"
-                                    alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a></h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-
-                <!--//seller-->
-                <!--tag-->
-                <div class="tag">
-                    <h3 class="cate">Tags</h3>
-                    <div class="tags">
-                        <ul>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">fashion</a></li>
-                            <li><a href="#">lorem</a></li>
-                            <li><a href="#">dress</a></li>
-                            <li><a href="#">fashion</a></li>
-                            <li><a href="#">dress</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">dress</a></li>
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">fashion</a></li>
-                            <li><a href="#">lorem</a></li>
-                            <li><a href="#">dress</a></li>
-                            <div class="clearfix"> </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="clearfix"> </div>
         </div>
     </div>
 @endsection
 @section('scripts')
     @parent
+    <script>
+        $('.show_details').click(function () {
+            $('.long_desc').slideToggle(200);
+        })
+    </script>
 
 @endsection

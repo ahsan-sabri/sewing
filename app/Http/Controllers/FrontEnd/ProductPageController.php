@@ -37,8 +37,14 @@ class ProductPageController extends Controller
 
     public function show($id)
     {
-        $product = Product::find($id);
-        // dd($product);
-        return view('frontend.singleproduct', ['product'=> $product]);
+        $data = [];
+        $data['product'] = Product::find($id);
+        $data['categories'] = Category::all();
+        $data['subcategories'] = SubCategory::all();
+        $data['featured_products'] = Product::featured()->inRandomOrder()->limit(4)->get();
+        $data['related_products'] = $data['product']->category->products->where('id', '!=', $id)->shuffle()->take(3);
+        $data['other_images'] = json_decode($data['product']->other_images, 2);
+
+        return view('frontend.singleproduct', $data);
     }
 }

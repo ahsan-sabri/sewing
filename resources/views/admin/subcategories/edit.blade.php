@@ -46,6 +46,7 @@
                         <option value="{{ $id }}" {{ isset($subcategory) && $subcategory->category->id == $id ? 'selected' : '' }}>{{ $categories }}</option>
                     @endforeach
                 </select>
+                <input type="hidden" name="category_id" id="category_id_hidden" value="{{ $subcategory->category->id }}" disabled/>
                 @if($errors->has('category_id'))
                     <em class="invalid-feedback">
                         {{ $errors->first('category_id') }}
@@ -78,4 +79,16 @@
 
     </div>
 </div>
+@endsection
+@section('scripts')
+@parent
+<script>
+    var hasProducts = {{ json_encode($subcategory->hasProducts()) }};
+    // console.log(hasProducts);
+    if (hasProducts) {
+        $('#category_id').prop("disabled", true);
+        $('#category_id_hidden').prop("disabled", false);
+    }
+        
+</script>
 @endsection

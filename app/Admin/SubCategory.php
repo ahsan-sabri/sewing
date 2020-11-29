@@ -19,4 +19,20 @@ class SubCategory extends Model
         return $this->hasMany('App\Admin\Product', 'subcategory_id', 'id');
     }
 
+    public function hasProducts()
+    {
+        return $this->products->count() ? true : false;
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($subcategory) {
+            $subcategory->products->each(function ($product) {
+                $product->delete();
+            });
+        });
+    } 
+
 }

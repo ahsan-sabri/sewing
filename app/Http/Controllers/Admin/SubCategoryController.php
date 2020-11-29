@@ -123,7 +123,7 @@ class SubCategoryController extends Controller
         if (! Gate::allows('subcategories_manage')) {
             return abort(401);
         }
-
+        
         $subcategory->delete();
 
         return redirect()->route('admin.subcategories.index');
