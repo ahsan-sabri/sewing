@@ -72,7 +72,7 @@
 
                 <!--//menu-->
                 <!--seller-->
-                <div class="product-bottom">
+                {{-- <div class="product-bottom">
                     <h3 class="cate">Featured Products</h3>
                     @if ($featured_products->count() > 0)
                         @foreach ($featured_products as $product)
@@ -96,11 +96,11 @@
 
 
 
-                </div>
+                </div> --}}
 
                 <!--//seller-->
                 <!--tag-->
-                <div class="tag"></div>
+                {{-- <div class="tag"></div> --}}
             </div>
             <div class="col-md-9 product-bottom">
                 <div class="content-top1">
