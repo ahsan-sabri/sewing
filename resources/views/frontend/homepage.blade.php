@@ -2,13 +2,19 @@
 
 @section('styles')
     @parent
+    <style>
+        ul.gallery-navbar li {
+            display: none;
+        }
+
+    </style>
 
 @endsection
 
 @section('content')
     <main id="main">
         <!-- ======= Cliens Section ======= -->
-        <section id="cliens" class="cliens section-bg">
+        {{-- <section id="cliens" class="cliens section-bg">
             <div class="container">
 
                 <div class="row" data-aos="zoom-in">
@@ -40,7 +46,8 @@
                 </div>
 
             </div>
-        </section><!-- End Cliens Section -->
+        </section> --}}
+        <!-- End Cliens Section -->
 
         <!-- ======= About Us Section ======= -->
         <section id="about" class="about">
@@ -61,9 +68,10 @@
                             <li><i class="ri-check-double-line"></i> We believe in precedence of quality & customer’s
                                 requirement.
                             </li>
-                            <li><i class="ri-check-double-line"></i> We are committed to provide satisfactory good quality
+                            <li><i class="ri-check-double-line"></i> We are committed to provide satisfactory good quality.
                                 products.</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                            <li><i class="ri-check-double-line"></i> We provide flexible order quantity opportunity to our
+                                valuable customers.
                             </li>
                         </ul>
                     </div>
@@ -519,10 +527,10 @@
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                             <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Nighat Shima</h4>
+                                <h4>Dr. Niaz M Reza</h4>
                                 <span>Director</span>
-                                <p>Phone- +88 01556 350315</p>
-                                <p>Email- nighat@texexclusive.com</p>
+                                <p>Phone- +61 422 863 485</p>
+                                <p>Email- texexclusive@gmail.com</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -539,7 +547,7 @@
                             <div class="member-info">
                                 <h4>Mohammad Khashruzzaman</h4>
                                 <span>Director, Marketing</span>
-                                <p>Phone-  +61 422 863 485</p>
+                                <p>Phone- +61 422 863 485</p>
                                 <p>Email- khasruzzaman@texexclusive.com</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -713,7 +721,8 @@
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+                        ex aliquid fuga eum quidem. Sit sint
                         consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
                         fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
@@ -795,5 +804,20 @@
 
 @section('scripts')
     @parent
+    <script>
+        $(function() {
+            $('.gallery-slideshow').slideshow({
+                //     // default: 2000
+                interval: 4000,
+                //     // default: 500
+                //     width: 600,
+                //     // default: 350
+                //     height: 500
+            });
+        });
+
+    </script>
+
+
 
 @endsection

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     @php
-        $company = \App\admin\Company::first();
+        $company = \App\Admin\Company::first();
         $logo = $company->logo ?? '';
         $name = $company->name ?? '';
     @endphp

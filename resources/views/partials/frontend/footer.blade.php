@@ -29,13 +29,14 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Wooven Item</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Knit Item</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Sweaters</a></li>
-                        
+
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Social Networks</h4>
-                    {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
+                    {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa
+                        magna derita valies</p> --}}
                     <div class="social-links mt-3">
                         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -53,7 +54,7 @@
             &copy; Copyright <strong><span>Texexclusive</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            
+
             Designed by <a href="http://texexclusive.com/">Texexclusive</a>
         </div>
     </div>
@@ -72,6 +73,7 @@
 <script src="{{ asset('assets/vendor/venobox/venobox.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+<script src="{{ asset('js/jquery-gallery.js') }}"></script>
 
 <!-- Template Main JS File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
